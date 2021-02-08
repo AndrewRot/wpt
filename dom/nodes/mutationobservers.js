@@ -6,7 +6,6 @@ function checkRecords(target, mutationToCheck, expectedRecord) {
   var mr1;
   var mr2;
 
-
   function checkField(property, isArray) {
     var field = mr2[property];
     if (isArray === undefined) {
@@ -49,6 +48,8 @@ function checkRecords(target, mutationToCheck, expectedRecord) {
     checkField("attributeName");
     checkField("attributeNamespace");
     checkField("oldValue");
+    checkField("elementByAttributeFilter", true); // todo - new
+    // checkField("elementFilter", true); // todo - new
   };
 }
 
