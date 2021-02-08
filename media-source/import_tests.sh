@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Touch this file
+
 if [ $# -lt 1 ]
 then
   echo "Usage: $0 <Blink directory>"
