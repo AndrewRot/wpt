@@ -48,7 +48,7 @@ function checkRecords(target, mutationToCheck, expectedRecord) {
     checkField("attributeName");
     checkField("attributeNamespace");
     checkField("oldValue");
-    checkField("elementByAttributeFilter", true); // todo - new
+    checkField("elementByAttributeFilter", true); // todo - new - how to make this pass existing tests...
     // checkField("elementFilter", true); // todo - new
   };
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <meta charset=utf-8>
 <title>MutationObservers: elementByAttributeFilter mutations</title>
+<script src="mutationobserver-elementByAttributeFilter.js"></script>
 <script src="/resources/testharness.js"></script>
 <script src="/resources/testharnessreport.js"></script>
 <script src="mutationobservers.js"></script>
@@ -79,11 +80,13 @@
 
   // elementByAttributeFilter is present & childList is omitted, set childList to true
   // elementByAttributeFilter is empty
-  // runMutationTest(n00,
-  //     {"elementByAttributeFilter":[]},
-  //     [{type: "attributes", attributeName: "class"}],
-  //     function() { n00.nodeValue = ""; n00.setAttribute("class", "dummy");},
-  //     "childList Node.nodeValue: no mutation");
+  runMutationTest(n00,
+      {"elementByAttributeFilter":[]},
+      [{type: "attributes", attributeName: "class"}],
+      // function() { n00.nodeValue = ""; n00.setAttribute("class", "dummy");},
+      function() { n00.nodeValue = "";},
+      "elementByAttributeFilter Node.nodeValue: no mutation");
+      // "childList Node.nodeValue: no mutation");
 
   // elementByAttributeFilter is present & childList is omitted, set childList to true
   // elementByAttributeFilter contains some attributes
